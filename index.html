@@ -1,0 +1,1366 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0B0B16" />
+    <meta name="description" content="Servicios auxiliares de la Asociación THESMOS en toda España: conserjería, recepción, control de accesos, taquillaje, acomodación, atención al público, custodia de llaves y facility services. Profesionalidad con impacto social." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://samudelgado.github.io/thesmos-servicios-auxiliares/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Asociación THESMOS" />
+    <meta property="og:title" content="THESMOS · Servicios Auxiliares" />
+    <meta property="og:description" content="Servicios auxiliares de la Asociación THESMOS en toda España: conserjería, recepción, control de accesos, taquillaje, acomodación, atención al público, custodia de llaves y facility services. Profesionalidad con impacto social." />
+    <meta property="og:url" content="https://samudelgado.github.io/thesmos-servicios-auxiliares/" />
+    <meta property="og:image" content="https://samudelgado.github.io/thesmos-servicios-auxiliares/assets/foto-1.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="THESMOS · Servicios Auxiliares" />
+    <meta name="twitter:description" content="Servicios auxiliares de la Asociación THESMOS en toda España: conserjería, recepción, control de accesos, taquillaje, acomodación, atención al público, custodia de llaves y facility services. Profesionalidad con impacto social." />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Asociación THESMOS para la Inserción Sociolaboral",
+        "url": "https://samudelgado.github.io/thesmos-servicios-auxiliares/",
+        "email": "asociacionthesmos@gmail.com",
+        "telephone": "+34 604 54 14 88",
+        "areaServed": { "@type": "Country", "name": "España" },
+        "description": "Servicios auxiliares en toda España: conserjería, recepción, control de accesos, taquillaje, acomodación, atención al público, custodia de llaves y facility services, prestados por una asociación sin ánimo de lucro de inserción sociolaboral.",
+        "makesOffer": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Control de accesos" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserjería" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recepción" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Taquillaje" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Acomodación" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Información y atención al público" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custodia de llaves" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facility services" } }
+        ]
+      }
+    </script>
+    <link rel="preload" as="image" href="assets/foto-1.jpg" media="(max-width: 820px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/foto-1.jpg" media="(min-width: 821px)" fetchpriority="high" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" />
+    <link rel="icon" href="data:," />
+    <title>THESMOS · Servicios Auxiliares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root{
+        --bg:#0B0B16;
+        --bg-2:#101020;
+        --panel:#14142a;
+        --panel-2:#181834;
+        --line:rgba(212,169,68,.22);
+        --line-soft:rgba(255,255,255,.08);
+        --gold:#D4A944;
+        --gold-soft:#E8C877;
+        --ink:#F6F3EC;
+        --muted:#B9B7C9;
+        --muted-2:#8E8CA3;
+        --radius:14px;
+        --font-body:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+        --font-display:'Marcellus',Georgia,serif;
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth;overflow-x:hidden;overflow-x:clip}
+      body{
+        margin:0;background:var(--bg);color:var(--ink);
+        font-family:var(--font-body);font-size:16.5px;line-height:1.65;
+        -webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip;
+        -webkit-tap-highlight-color:rgba(212,169,68,.14);
+      }
+      body.menu-open{overflow:hidden}
+      a,button{touch-action:manipulation}
+      section[id],div[id="contacto"]{scroll-margin-top:92px}
+      img{max-width:100%;display:block}
+      a{color:var(--gold-soft)}
+      ::selection{background:var(--gold);color:#14100a}
+
+      .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+      /* ---------- Cabecera ---------- */
+      header{
+        position:fixed;inset:0 0 auto 0;z-index:60;
+        transition:background .35s ease,border-color .35s ease,box-shadow .35s ease;
+        border-bottom:1px solid transparent;
+      }
+      header.scrolled{
+        background:rgba(11,11,22,.92);backdrop-filter:blur(14px);
+        border-bottom-color:var(--line-soft);
+        box-shadow:0 10px 34px rgba(0,0,0,.45);
+      }
+      .header-in{display:flex;align-items:center;gap:16px;padding:14px 0}
+      .brand{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--ink);min-width:0}
+      .brand-mark{
+        width:44px;height:44px;flex:none;border:1.5px solid var(--gold);border-radius:50%;
+        display:grid;place-items:center;color:var(--gold);
+        font-family:var(--font-display);font-size:24px;line-height:1;
+        background:radial-gradient(circle at 50% 38%,rgba(212,169,68,.16),transparent 70%);
+      }
+      .brand-name{font-family:var(--font-display);font-size:21px;letter-spacing:.24em;line-height:1.05;white-space:nowrap}
+      .brand-sub{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:3px;white-space:nowrap}
+      nav.main{margin-left:auto;display:flex;align-items:center;gap:20px}
+      nav.main a{
+        color:var(--muted);text-decoration:none;font-size:14.5px;font-weight:500;letter-spacing:.02em;
+        white-space:nowrap;
+        transition:color .25s;
+      }
+      nav.main .btn{white-space:nowrap}
+      @media (min-width:821px) and (max-width:1150px){
+        nav.main{gap:15px}
+        nav.main a{font-size:13.5px}
+        nav.main .btn{padding:10px 18px;font-size:13.5px}
+        .brand-name{font-size:19px}
+      }
+      nav.main a:hover{color:var(--ink)}
+      .btn{
+        display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;
+        background:var(--gold);color:#171204 !important;
+        font-weight:700;font-size:14.5px;padding:11px 22px;border-radius:999px;
+        text-decoration:none;border:1px solid var(--gold);
+        transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease;
+      }
+      .btn:hover{background:var(--gold-soft);border-color:var(--gold-soft);transform:translateY(-2px)}
+      .btn.ghost{background:transparent;color:var(--ink) !important;border-color:rgba(255,255,255,.35)}
+      .btn.ghost:hover{border-color:var(--gold);color:var(--gold-soft) !important;background:rgba(212,169,68,.08)}
+      .nav-toggle{
+        display:none;margin-left:auto;background:none;border:1px solid var(--line-soft);
+        border-radius:12px;width:48px;height:48px;cursor:pointer;color:var(--ink);
+        align-items:center;justify-content:center;position:relative;z-index:3;
+        transition:border-color .25s ease,background .25s ease;
+      }
+      .nav-toggle:active{background:rgba(212,169,68,.1)}
+      .nav-toggle svg line{transform-box:fill-box;transform-origin:center;transition:transform .32s cubic-bezier(.16,.8,.26,1),opacity .2s ease}
+      .nav-toggle[aria-expanded="true"] svg line:nth-of-type(1){transform:translateY(5px) rotate(45deg)}
+      .nav-toggle[aria-expanded="true"] svg line:nth-of-type(2){opacity:0}
+      .nav-toggle[aria-expanded="true"] svg line:nth-of-type(3){transform:translateY(-5px) rotate(-45deg)}
+      header.menu-open{background:rgba(11,11,22,.97);border-bottom-color:var(--line-soft)}
+      .header-in{position:relative;z-index:2}
+
+      /* ---------- Hero ---------- */
+      .hero{position:relative;padding:168px 0 96px;overflow:hidden}
+      .hero::before{
+        content:"";position:absolute;inset:0;
+        background:
+          linear-gradient(180deg,rgba(11,11,22,.82) 0%,rgba(11,11,22,.66) 46%,rgba(11,11,22,.94) 100%),
+          linear-gradient(100deg,rgba(11,11,22,.9) 20%,rgba(11,11,22,.35) 75%),
+          url('assets/foto-1.jpg') center 30%/cover no-repeat;
+      }
+      .hero-theta{
+        position:absolute;right:-70px;top:60px;z-index:2;font-family:var(--font-display);
+        font-size:520px;line-height:1;color:transparent;
+        -webkit-text-stroke:1px rgba(212,169,68,.13);
+        pointer-events:none;user-select:none;
+        animation:thetaFloat 14s ease-in-out infinite;
+      }
+      .hero-theta.px-on{animation:none;will-change:transform}
+      @keyframes thetaFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(2deg)}}
+      .hero-in{position:relative;z-index:3;max-width:760px;will-change:transform,opacity}
+      .hero-canvas{
+        position:absolute;inset:0;width:100%;height:100%;z-index:1;
+        pointer-events:none;
+      }
+      .hero-chip{
+        display:inline-flex;align-items:center;gap:9px;
+        border:1px solid var(--line);border-radius:999px;padding:7px 16px;
+        font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);
+        background:rgba(11,11,22,.55);
+      }
+      .hero-chip .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none}
+      .hero h1{
+        font-family:var(--font-display);font-weight:400;
+        font-size:clamp(38px,5.6vw,62px);line-height:1.12;margin:26px 0 20px;letter-spacing:.01em;
+      }
+      .hero h1 em{font-style:normal;color:var(--gold)}
+      .hero p.lead{font-size:18.5px;color:#DDD9E8;max-width:640px;margin:0 0 34px}
+      .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+      .hero-ctas .btn{padding:14px 28px;font-size:15.5px}
+      .hero-points{
+        display:flex;gap:14px 38px;flex-wrap:wrap;margin-top:46px;
+        padding-top:28px;border-top:1px solid rgba(255,255,255,.14);
+      }
+      .hero-points span{display:flex;align-items:center;gap:9px;font-size:14.5px;color:var(--muted)}
+      .hero-points svg{color:var(--gold);flex:none}
+
+      /* ---------- Franja de ámbitos ---------- */
+      .ambitos{border-block:1px solid var(--line-soft);background:var(--bg-2)}
+      .ambitos-in{
+        display:flex;flex-wrap:wrap;gap:10px 0;align-items:center;justify-content:space-between;
+        padding:20px 0;
+      }
+      .ambitos-in span{
+        font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);
+        display:flex;align-items:center;gap:26px;
+      }
+      .ambitos-in span::after{content:"Θ";color:var(--gold);font-family:var(--font-display);font-size:12px;opacity:.7}
+      .ambitos-in span:last-child::after{content:""}
+
+      /* ---------- Secciones ---------- */
+      section{padding:96px 0}
+      .sec-head{max-width:720px;margin-bottom:52px}
+      .sec-head.center{margin-inline:auto;text-align:center}
+      .kicker{
+        font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+        font-weight:600;display:flex;align-items:center;gap:12px;margin-bottom:16px;
+      }
+      .sec-head.center .kicker{justify-content:center}
+      .kicker::before{content:"";width:34px;height:1px;background:var(--gold)}
+      .sec-head.center .kicker::after{content:"";width:34px;height:1px;background:var(--gold)}
+      h2{font-family:var(--font-display);font-weight:400;font-size:clamp(30px,3.8vw,44px);line-height:1.18;margin:0 0 16px}
+      h2 em{font-style:normal;color:var(--gold)}
+      .sec-head p{color:var(--muted);font-size:17.5px;margin:0}
+
+      /* ---------- Servicios ---------- */
+      .grid-servicios{
+        display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+      }
+      .card{
+        background:linear-gradient(165deg,var(--panel-2),var(--panel));
+        border:1px solid var(--line-soft);border-radius:var(--radius);
+        padding:30px 26px;position:relative;overflow:hidden;
+        transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+      }
+      .card::before{
+        content:"";position:absolute;inset:0 0 auto 0;height:2px;
+        background:linear-gradient(90deg,transparent,var(--gold),transparent);
+        opacity:0;transition:opacity .35s ease;
+      }
+      .card:hover{transform:translateY(-6px);border-color:var(--line);box-shadow:0 22px 44px rgba(0,0,0,.4)}
+      .card:hover::before{opacity:1}
+      .card .icon{
+        width:52px;height:52px;border-radius:13px;display:grid;place-items:center;
+        border:1px solid var(--line);color:var(--gold);
+        background:rgba(212,169,68,.07);margin-bottom:20px;
+        transition:background .35s ease,transform .35s ease;
+      }
+      .card:hover .icon{background:rgba(212,169,68,.15);transform:scale(1.06)}
+      .card h3{font-size:18.5px;font-weight:600;margin:0 0 9px;letter-spacing:.01em}
+      .card p{color:var(--muted);font-size:14.8px;margin:0;line-height:1.6}
+      .card .num{
+        position:absolute;top:20px;right:22px;font-family:var(--font-display);
+        font-size:15px;color:rgba(212,169,68,.45);letter-spacing:.08em;
+      }
+
+      /* ---------- Servicio destacado: Control de accesos ---------- */
+      .card.featured{
+        grid-column:1 / -1;
+        display:grid;grid-template-columns:1.12fr 1fr;gap:16px 44px;
+        border-color:var(--gold);
+        background:linear-gradient(130deg,rgba(212,169,68,.14),var(--panel-2) 52%,var(--panel));
+        padding:40px 44px;scroll-margin-top:110px;
+        box-shadow:0 24px 50px rgba(0,0,0,.38);
+      }
+      .card.featured::before{opacity:1}
+      .card.featured .f-head{display:flex;align-items:flex-start;gap:20px}
+      .card.featured .icon{width:62px;height:62px;border-radius:16px;margin-bottom:0;flex:none;background:rgba(212,169,68,.14)}
+      .card.featured h3{font-family:var(--font-display);font-weight:400;font-size:27px;margin:2px 0 0;line-height:1.2}
+      .badge-destacado{
+        display:inline-flex;align-items:center;gap:7px;margin-top:9px;
+        font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+        color:#171204;background:var(--gold);border-radius:999px;padding:5px 13px;
+      }
+      .card.featured p.f-desc{font-size:16px;color:#D8D4E4;grid-column:1;margin:0;line-height:1.65}
+      .card.featured p.f-desc strong{color:var(--gold-soft)}
+      .f-list{list-style:none;margin:0;padding:4px 0 0;display:grid;gap:13px;align-content:start}
+      .f-list li{display:flex;gap:11px;color:var(--muted);font-size:15.3px;align-items:flex-start;line-height:1.55}
+      .f-list li b{color:var(--ink);font-weight:600}
+      .f-list svg{color:var(--gold);flex:none;margin-top:4px}
+      .f-note{
+        grid-column:1 / -1;display:flex;gap:12px;align-items:flex-start;
+        border-top:1px solid var(--line);padding-top:18px;margin-top:6px;
+        color:var(--muted);font-size:13.8px;line-height:1.55;
+      }
+      .f-note svg{color:var(--gold);flex:none;margin-top:2px}
+      .f-note strong{color:var(--gold-soft)}
+
+      /* ---------- Aviso legal ---------- */
+      .aviso{padding:0 0 96px}
+      .aviso-box{
+        border:1px solid var(--gold);border-radius:18px;
+        background:linear-gradient(120deg,rgba(212,169,68,.1),rgba(212,169,68,.03) 55%,rgba(212,169,68,.07));
+        padding:38px 42px;display:flex;gap:28px;align-items:flex-start;
+      }
+      .aviso-box .shield{
+        width:58px;height:58px;flex:none;border-radius:50%;
+        border:1.5px solid var(--gold);display:grid;place-items:center;color:var(--gold);
+        background:rgba(11,11,22,.5);
+      }
+      .aviso-box h3{font-family:var(--font-display);font-weight:400;font-size:24px;margin:2px 0 10px}
+      .aviso-box p{color:#D8D4E4;margin:0;font-size:16px;max-width:880px}
+      .aviso-box p strong{color:var(--gold-soft)}
+
+      /* ---------- Por qué elegirnos ---------- */
+      .porque{background:var(--bg-2);border-block:1px solid var(--line-soft)}
+      .porque-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center}
+      .porque-photo{position:relative}
+      .porque-photo img{border-radius:18px;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.4}
+      .porque-photo::after{
+        content:"";position:absolute;inset:0;border-radius:18px;
+        box-shadow:inset 0 0 0 1px var(--line-soft);
+        background:linear-gradient(200deg,transparent 55%,rgba(11,11,22,.5));
+      }
+      .porque-photo .tag{
+        position:absolute;left:20px;bottom:20px;z-index:2;
+        background:rgba(11,11,22,.86);border:1px solid var(--line);border-radius:12px;
+        padding:13px 18px;backdrop-filter:blur(6px);
+      }
+      .porque-photo .tag b{display:block;font-family:var(--font-display);font-weight:400;font-size:16.5px;color:var(--gold-soft);letter-spacing:.04em}
+      .porque-photo .tag small{color:var(--muted);font-size:12.5px}
+      .valores{display:grid;gap:8px;margin-top:30px}
+      .valor{display:flex;gap:18px;padding:20px 6px;border-bottom:1px solid var(--line-soft)}
+      .valor:last-child{border-bottom:none}
+      .valor .v-icon{
+        width:44px;height:44px;flex:none;border-radius:12px;display:grid;place-items:center;
+        border:1px solid var(--line);color:var(--gold);background:rgba(212,169,68,.07);
+      }
+      .valor h3{margin:0 0 5px;font-size:17.5px;font-weight:600}
+      .valor p{margin:0;color:var(--muted);font-size:15px}
+
+      /* ---------- Cómo trabajamos ---------- */
+      .pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+      .paso{
+        border:1px solid var(--line-soft);border-radius:var(--radius);padding:32px 28px;
+        background:var(--panel);position:relative;
+      }
+      .paso .n{
+        font-family:var(--font-display);font-size:44px;color:transparent;
+        -webkit-text-stroke:1.2px var(--gold);line-height:1;display:block;margin-bottom:18px;
+      }
+      .paso h3{margin:0 0 8px;font-size:18px;font-weight:600}
+      .paso p{margin:0;color:var(--muted);font-size:15px}
+
+      /* ---------- Foto taquilla / eventos ---------- */
+      .banda-foto{padding:0 0 96px}
+      .banda{
+        position:relative;border-radius:18px;overflow:hidden;min-height:340px;
+        display:flex;align-items:flex-end;
+      }
+      .banda img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+      .banda::after{
+        content:"";position:absolute;inset:0;
+        background:linear-gradient(90deg,rgba(11,11,22,.9) 8%,rgba(11,11,22,.45) 55%,rgba(11,11,22,.15));
+      }
+      .banda-in{position:relative;z-index:2;padding:44px;max-width:600px}
+      .banda-in h3{font-family:var(--font-display);font-weight:400;font-size:clamp(24px,3vw,32px);margin:0 0 10px;line-height:1.25}
+      .banda-in h3 em{font-style:normal;color:var(--gold)}
+      .banda-in p{color:#DDD9E8;margin:0;font-size:16px}
+
+      /* ---------- Contacto ---------- */
+      .contacto{background:var(--bg-2);border-top:1px solid var(--line-soft)}
+      .contacto-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+      .contacto h2{margin-bottom:14px}
+      .contacto .intro{color:var(--muted);font-size:17.5px;margin:0 0 30px;max-width:520px}
+      .contact-cards{display:grid;gap:14px}
+      .c-card{
+        display:flex;gap:18px;align-items:center;
+        border:1px solid var(--line-soft);border-radius:var(--radius);
+        background:var(--panel);padding:22px 24px;text-decoration:none;color:var(--ink);
+        transition:border-color .3s ease,transform .3s ease;
+      }
+      a.c-card:hover{border-color:var(--line);transform:translateX(5px)}
+      .c-card .c-icon{
+        width:48px;height:48px;flex:none;border-radius:12px;display:grid;place-items:center;
+        border:1px solid var(--line);color:var(--gold);background:rgba(212,169,68,.07);
+      }
+      .c-card small{display:block;color:var(--muted-2);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
+      .c-card b{font-size:17.5px;font-weight:600;word-break:break-word}
+      .contacto-note{color:var(--muted-2);font-size:13.5px;margin-top:20px}
+      .form-fake{
+        border:1px solid var(--line-soft);border-radius:18px;background:var(--panel);
+        padding:34px 32px;
+      }
+      .form-fake h3{font-family:var(--font-display);font-weight:400;font-size:23px;margin:0 0 8px}
+      .form-fake p{color:var(--muted);font-size:15px;margin:0 0 22px}
+      .form-fake ul{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:11px}
+      .form-fake li{display:flex;gap:11px;color:var(--muted);font-size:15px;align-items:flex-start}
+      .form-fake li svg{color:var(--gold);flex:none;margin-top:3px}
+
+      /* ---------- Pie ---------- */
+      footer{border-top:1px solid var(--line-soft);padding:52px 0 40px;background:#08080F}
+      .foot-grid{display:flex;gap:44px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start}
+      .foot-brand{max-width:380px}
+      .foot-brand p{color:var(--muted-2);font-size:14.5px;margin:14px 0 0}
+      .foot-col h4{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 16px;font-weight:600}
+      .foot-col a,.foot-col span{display:block;color:var(--muted);text-decoration:none;font-size:15px;margin-bottom:9px}
+      .foot-col a:hover{color:var(--ink)}
+      .foot-legal{
+        margin-top:42px;padding-top:24px;border-top:1px solid var(--line-soft);
+        display:flex;gap:14px 34px;flex-wrap:wrap;justify-content:space-between;
+        color:var(--muted-2);font-size:13.5px;
+      }
+      .foot-col a.active{color:var(--gold);font-weight:600}
+      .foot-col a.active::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:9px;vertical-align:2px}
+
+      /* ---------- Accesibilidad: salto de contenido y foco visible ---------- */
+      .skip-link{
+        position:fixed;top:12px;left:12px;z-index:200;
+        background:var(--gold);color:#171204;font-weight:700;font-size:14.5px;
+        padding:11px 20px;border-radius:999px;text-decoration:none;
+        transform:translateY(-260%);transition:transform .25s ease;
+      }
+      .skip-link:focus{transform:none}
+      a:focus-visible,button:focus-visible{
+        outline:2px solid var(--gold);outline-offset:3px;border-radius:6px;
+      }
+
+      /* ---------- Menú «Nuestros servicios» (webs THESMOS) ---------- */
+      .nav-services{position:relative}
+      .nav-services-btn{
+        display:inline-flex;align-items:center;gap:7px;
+        background:none;border:none;cursor:pointer;padding:6px 0;
+        color:var(--muted);font-family:inherit;font-size:14.5px;font-weight:500;letter-spacing:.02em;
+        white-space:nowrap;
+        transition:color .25s;
+      }
+      @media (min-width:821px) and (max-width:1150px){
+        .nav-services-btn{font-size:13.5px}
+      }
+      .nav-services-btn:hover{color:var(--ink)}
+      .nav-services-btn svg{transition:transform .3s ease;flex:none}
+      .nav-services.open .nav-services-btn{color:var(--ink)}
+      .nav-services.open .nav-services-btn svg{transform:rotate(180deg)}
+      .services-menu{
+        position:absolute;top:calc(100% + 16px);right:0;z-index:80;
+        min-width:262px;padding:10px;
+        background:linear-gradient(180deg,#15152c,#0e0e1e);
+        border:1px solid var(--line);border-radius:16px;
+        box-shadow:0 28px 54px rgba(0,0,0,.55);
+        opacity:0;visibility:hidden;transform:translateY(10px);
+        transition:opacity .28s ease,transform .28s cubic-bezier(.16,.8,.26,1),visibility .28s;
+      }
+      .nav-services.open .services-menu{opacity:1;visibility:visible;transform:none}
+      @media (min-width:821px){
+        .nav-services:hover .services-menu,.nav-services:focus-within .services-menu{
+          opacity:1;visibility:visible;transform:none;
+        }
+        .nav-services:hover .nav-services-btn svg,.nav-services:focus-within .nav-services-btn svg{transform:rotate(180deg)}
+      }
+      .services-menu a{
+        display:flex !important;align-items:center;gap:10px;
+        padding:10px 13px;border-radius:10px;
+        color:var(--muted);text-decoration:none;font-size:14.5px;font-weight:500;
+        transition:background .22s ease,color .22s ease;
+        white-space:nowrap;
+      }
+      .services-menu a::after{content:none !important}
+      .services-menu a:hover{background:rgba(212,169,68,.09);color:var(--ink)}
+      .services-menu a.active{color:var(--gold);font-weight:700;background:rgba(212,169,68,.1)}
+      .services-menu a.active::before{
+        content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none;
+      }
+
+      /* ---------- Animación al hacer scroll ---------- */
+      .reveal{opacity:0;transform:translateY(34px) scale(.995);filter:blur(6px);transition:opacity .9s ease,transform .95s cubic-bezier(.16,.8,.26,1),filter .9s ease}
+      .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}
+      .reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+      .reveal.visible{opacity:1;transform:none;filter:blur(0)}
+
+      /* ---------- Capa premium: motion design y micro-interacciones ---------- */
+      #progress{
+        position:fixed;top:0;left:0;height:3px;width:100%;z-index:80;
+        transform-origin:0 50%;transform:scaleX(0);
+        background:linear-gradient(90deg,var(--gold),var(--gold-soft));
+        box-shadow:0 0 14px rgba(212,169,68,.55);pointer-events:none;
+      }
+      .header-in{transition:padding .35s ease}
+      header.scrolled .header-in{padding-top:9px;padding-bottom:9px}
+      @media (min-width:821px){
+        nav.main a:not(.btn){position:relative}
+        nav.main a:not(.btn)::after{
+          content:"";position:absolute;left:0;right:0;bottom:-6px;height:1.5px;
+          background:var(--gold);transform:scaleX(0);transform-origin:right;
+          transition:transform .35s cubic-bezier(.16,.8,.26,1);
+        }
+        nav.main a:not(.btn):hover::after{transform:scaleX(1);transform-origin:left}
+      }
+      .btn{position:relative;overflow:hidden;isolation:isolate}
+      .btn::after{
+        content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;
+        background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);
+        transform:skewX(-20deg);transition:left .6s ease;pointer-events:none;
+      }
+      .btn:hover::after{left:135%}
+      .btn:active{transform:translateY(0) scale(.98)}
+
+      /* Línea del kicker que se dibuja al entrar la sección */
+      .reveal .kicker::before{transform:scaleX(0);transform-origin:left center;transition:transform 1s cubic-bezier(.16,.8,.26,1) .25s}
+      .reveal.visible .kicker::before{transform:scaleX(1)}
+      .reveal .kicker::after{transform:scaleX(0);transform-origin:right center;transition:transform 1s cubic-bezier(.16,.8,.26,1) .25s}
+      .reveal.visible .kicker::after{transform:scaleX(1)}
+
+      /* Spotlight que sigue al ratón en tarjetas y pasos */
+      .card::after,.paso::after{
+        content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+        background:radial-gradient(340px circle at var(--mx,50%) var(--my,50%),rgba(212,169,68,.14),transparent 65%);
+        opacity:0;transition:opacity .35s ease;
+      }
+      .card:hover::after,.paso:hover::after{opacity:1}
+      .card.tilting{transition:transform .15s ease-out,border-color .35s ease,box-shadow .35s ease}
+      .paso{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+      .paso:hover{transform:translateY(-5px);border-color:var(--line);box-shadow:0 20px 40px rgba(0,0,0,.38)}
+      .valor{transition:transform .3s ease}
+      .valor:hover{transform:translateX(5px)}
+
+      /* Marquesina de ámbitos */
+      .ambitos-in.marquee{
+        overflow:hidden;justify-content:flex-start;
+        -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+        mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+      }
+      .amb-track{display:flex;align-items:center;width:max-content;animation:ambScroll 38s linear infinite}
+      .ambitos-in.marquee:hover .amb-track{animation-play-state:paused}
+      .amb-track span{padding-right:26px;flex:none}
+      @keyframes ambScroll{to{transform:translateX(-50%)}}
+
+      /* Parallax de la banda de eventos */
+      .banda img.bg{transform:scale(1.14);will-change:transform}
+
+      @media (prefers-reduced-motion:reduce){
+        html{scroll-behavior:auto}
+        .reveal{opacity:1;transform:none;filter:none;transition:none}
+        .hero-theta{animation:none}
+        .hero-canvas{display:none}
+        .amb-track{animation:none}
+        .banda img.bg{transform:none}
+        *{transition:none !important;animation:none !important}
+      }
+
+      /* ---------- Táctil: sin efectos hover pegados ---------- */
+      @media (hover:none){
+        .card:hover{transform:none}
+        .valor:hover{transform:none}
+        a.c-card:hover{transform:none}
+        .btn:hover{transform:none}
+        .card:hover .icon{transform:none}
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width:1020px){
+        .grid-servicios{grid-template-columns:repeat(2,1fr)}
+        .porque-grid,.contacto-grid{grid-template-columns:1fr;gap:44px}
+        .porque-photo img{aspect-ratio:16/9}
+      }
+      @media (max-width:820px){
+        body{font-size:16px}
+        /* Menú móvil: panel premium a todo ancho, enlaces grandes y entrada escalonada */
+        nav.main{
+          position:absolute;top:calc(100% + 1px);left:0;right:0;z-index:1;
+          background:linear-gradient(180deg,rgba(15,15,30,.98),rgba(11,11,22,.99));
+          border-bottom:1px solid var(--line);
+          box-shadow:0 34px 54px rgba(0,0,0,.55);
+          flex-direction:column;align-items:stretch;gap:0;
+          padding:6px 24px calc(22px + env(safe-area-inset-bottom));
+          max-height:calc(100dvh - 74px);overflow-y:auto;overscroll-behavior:contain;
+          display:none;
+        }
+        nav.main.open{display:flex;animation:navPanelIn .42s cubic-bezier(.16,.8,.26,1) both}
+        nav.main a{
+          display:flex;align-items:center;min-height:58px;
+          padding:15px 2px;border-bottom:1px solid var(--line-soft);
+          font-size:17.5px;font-weight:600;color:var(--ink);letter-spacing:.01em;
+        }
+        nav.main a:active{color:var(--gold-soft)}
+        nav.main.open a{animation:navLinkIn .5s cubic-bezier(.16,.8,.26,1) both}
+        nav.main.open a:nth-child(2){animation-delay:.05s}
+        nav.main.open a:nth-child(3){animation-delay:.1s}
+        nav.main.open a:nth-child(4){animation-delay:.15s}
+        nav.main.open a:nth-child(5){animation-delay:.2s}
+        nav.main a.btn{
+          justify-content:center;margin-top:16px;min-height:56px;
+          font-size:16px;border-bottom:1px solid var(--gold);
+        }
+        /* «Nuestros servicios» en móvil: acordeón dentro del panel */
+        .nav-services{width:100%}
+        .nav-services-btn{
+          width:100%;min-height:58px;padding:15px 2px;
+          border-bottom:1px solid var(--line-soft);
+          font-size:17.5px;font-weight:600;color:var(--ink);letter-spacing:.01em;
+        }
+        .nav-services-btn:active{color:var(--gold-soft)}
+        .services-menu{
+          position:static;min-width:0;padding:2px 0 6px;
+          background:none;border:none;border-radius:0;box-shadow:none;
+          border-bottom:1px solid var(--line-soft);
+          display:none;opacity:1;visibility:visible;transform:none;transition:none;
+        }
+        .nav-services.open .services-menu{display:block}
+        .services-menu a{
+          min-height:50px;padding:11px 2px 11px 16px;
+          border-bottom:1px solid rgba(255,255,255,.045);
+          font-size:16px;color:var(--muted);border-radius:0;
+        }
+        .services-menu a:last-child{border-bottom:none}
+        .nav-toggle{display:flex}
+        .brand{position:relative;z-index:3}
+        /* Hero móvil: fondo ligero y ritmo vertical ajustado */
+        .hero{padding:126px 0 64px}
+        .hero::before{
+          background:
+            linear-gradient(180deg,rgba(11,11,22,.85) 0%,rgba(11,11,22,.68) 46%,rgba(11,11,22,.95) 100%),
+            linear-gradient(100deg,rgba(11,11,22,.92) 20%,rgba(11,11,22,.4) 78%),
+            url('assets/foto-1.jpg') center 30%/cover no-repeat;
+        }
+        .hero-theta{font-size:290px;right:-56px;top:96px}
+        .hero p.lead{font-size:17.5px;margin-bottom:30px}
+        .hero-ctas .btn{min-height:54px;padding:14px 26px;font-size:16px}
+        .hero-points{margin-top:38px;padding-top:24px}
+        section{padding:64px 0}
+        .sec-head{margin-bottom:40px}
+        .sec-head p{font-size:16.5px}
+        .aviso{padding-bottom:64px}
+        .banda-foto{padding-bottom:64px}
+        .aviso-box{flex-direction:column;padding:30px 26px;gap:20px}
+        .card.featured{grid-template-columns:1fr;padding:30px 26px;gap:18px}
+        .card.featured p.f-desc{grid-column:auto}
+        .pasos{grid-template-columns:1fr}
+        .banda{min-height:320px}
+        .banda-in{padding:30px 24px}
+        .contacto .intro{font-size:16.5px}
+        .c-card{min-height:78px}
+        .form-fake{padding:30px 26px}
+        footer{padding-bottom:calc(40px + env(safe-area-inset-bottom))}
+        .foot-col a{padding:5px 0}
+        /* Reveals móviles: sin blur, recorrido corto = scroll táctil fluido */
+        .reveal{transform:translateY(22px);filter:none;transition:opacity .7s ease,transform .78s cubic-bezier(.16,.8,.26,1)}
+        .reveal.visible{filter:none}
+      }
+      @keyframes navPanelIn{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+      @keyframes navLinkIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+      @media (max-width:560px){
+        .grid-servicios{grid-template-columns:1fr}
+        .brand-sub{display:none}
+        .brand-name{font-size:19px}
+        .brand-mark{width:40px;height:40px;font-size:21px}
+        .hero-points{gap:12px 22px}
+        .ambitos-in{justify-content:flex-start;gap:12px 22px}
+        .ambitos-in:not(.marquee) span::after{content:""}
+        .amb-track span{padding-right:22px}
+      }
+      @media (max-width:480px){
+        .wrap{padding:0 18px}
+        .hero{padding:112px 0 56px}
+        .hero h1{font-size:33.5px;line-height:1.16;margin:22px 0 16px}
+        .hero p.lead{font-size:16.5px;line-height:1.6}
+        .hero-chip{font-size:11.5px;padding:6px 13px}
+        .hero-ctas{flex-direction:column;gap:12px}
+        .hero-ctas .btn{width:100%;min-height:56px}
+        .hero-points{flex-direction:column;gap:11px;margin-top:32px}
+        .hero-theta{font-size:205px;right:-38px;top:120px}
+        h2{font-size:28px}
+        .card{padding:26px 22px}
+        .card.featured{padding:26px 22px}
+        .card.featured .f-head{gap:14px}
+        .card.featured .icon{width:54px;height:54px;border-radius:14px}
+        .card.featured h3{font-size:23px}
+        .f-list li{font-size:14.8px}
+        .aviso-box{padding:26px 22px}
+        .aviso-box h3{font-size:21px}
+        .paso{padding:28px 24px}
+        .banda-in{padding:26px 20px}
+        .banda-in h3{font-size:23px}
+        .porque-photo .tag{left:14px;right:14px;bottom:14px}
+        .c-card{padding:18px 18px;gap:14px}
+        .c-card b{font-size:16px}
+        .form-fake{padding:26px 22px}
+        .foot-grid{gap:34px}
+      }
+      @media (prefers-reduced-motion:reduce){
+        nav.main{transition:none}
+        nav.main.open a{animation:none}
+      }
+    </style>
+  <style>
+/* ===== THESMOS · Migración GitHub Pages: logotipo textual + optimización móvil ===== */
+.brand .theta-logo,.hero-logo .theta-logo,.emblem .theta-logo,.disc .theta-logo{display:inline-flex;align-items:center;justify-content:center;background:#10101C;color:#C8A24B;border-radius:50%;font-family:Georgia,'Times New Roman',serif;font-weight:700;line-height:1;flex:none}
+
+img{max-width:100%;height:auto;display:block}
+html,body{overflow-x:hidden}
+@media (max-width:640px){
+h1{font-size:clamp(2rem,8vw,2.9rem)!important;line-height:1.12!important}
+h2{font-size:clamp(1.4rem,5.5vw,2.05rem)!important;line-height:1.22!important}
+section{padding-left:20px;padding-right:20px}
+.wrap{padding-left:20px!important;padding-right:20px!important}
+a.btn,.btn,button,.cta,.link,.menu-btn,.nav-cta,.svc-btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.grid-servicios,.porque-grid,.foot-grid,.contacto-grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div id="progress" aria-hidden="true"></div>
+
+    <!-- ================= CABECERA ================= -->
+    <header id="header">
+      <div class="wrap header-in">
+        <a class="brand" href="#inicio" aria-label="THESMOS — Servicios Auxiliares">
+          <span class="brand-mark" aria-hidden="true">Θ</span>
+          <span>
+            <span class="brand-name">THESMOS</span>
+            <span class="brand-sub" style="display:block">Servicios Auxiliares</span>
+          </span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <nav class="main" id="mainNav" aria-label="Navegación principal">
+          <a href="#control-accesos">Control de accesos</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#por-que-thesmos">Por qué THESMOS</a>
+          <a href="#como-trabajamos">Cómo trabajamos</a>
+          <div class="nav-services" id="navServices">
+            <button type="button" class="nav-services-btn" id="navServicesBtn" aria-haspopup="true" aria-expanded="false" aria-controls="servicesMenu">
+              Nuestros servicios
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="services-menu" id="servicesMenu" role="menu" aria-label="Nuestros servicios">
+              <a role="menuitem" href="https://samudelgado.github.io/thesmos-web-principal/">THESMOS · Inicio</a>
+              <a role="menuitem" class="active" aria-current="page" href="https://samudelgado.github.io/thesmos-servicios-auxiliares/">Servicios Auxiliares</a>
+              <a role="menuitem" href="https://samudelgado.github.io/thesmos-limpieza/">Limpieza</a>
+              <a role="menuitem" href="https://samudelgado.github.io/thesmos-jardineria/">Jardinería</a>
+              <a role="menuitem" href="https://samudelgado.github.io/thesmos-mantenimiento/">Mantenimiento</a>
+              <a role="menuitem" href="https://samudelgado.github.io/thesmos-eventos/">Eventos</a>
+              <a role="menuitem" href="https://samudelgado.github.io/thesmos-comercio/">Comercio</a>
+              <a role="menuitem" href="https://samudelgado.github.io/thesmos-hosteleria/">Hostelería</a>
+              <a role="menuitem" href="https://samudelgado.github.io/thesmos-tecnologia/">Tecnología</a>
+            </div>
+          </div>
+          <a class="btn" href="https://wa.me/34604541488?text=Hola%2C%20quiero%20pedir%20un%20presupuesto" target="_blank" rel="noopener">Solicitar presupuesto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio" aria-label="Presentación de los servicios auxiliares de THESMOS">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <span class="hero-theta" aria-hidden="true">Θ</span>
+      <div class="wrap hero-in">
+        <span class="hero-chip reveal"><span class="dot"></span> Asociación THESMOS · Toda España</span>
+        <h1 class="reveal d1">La primera impresión de tu espacio, <em>en las mejores manos</em></h1>
+        <p class="lead reveal d2">Conserjería, recepción, control de accesos y atención al público para empresas, comunidades e instituciones. Servicios auxiliares prestados con rigor profesional por una asociación sin ánimo de lucro: calidad para tu organización y empleo digno para las personas.</p>
+        <div class="hero-ctas reveal d3">
+          <a class="btn" href="#servicios">Ver los servicios</a>
+          <a class="btn ghost" href="https://wa.me/34604541488" target="_blank" rel="noopener">Hablar con nosotros</a>
+        </div>
+        <div class="hero-points reveal d4">
+          <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Personal formado y supervisado</span>
+          <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Impacto social en cada contrato</span>
+          <span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Servicios continuados y eventos puntuales</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ÁMBITOS ================= -->
+    <div class="ambitos" aria-label="Ámbitos de trabajo">
+      <div class="wrap ambitos-in">
+        <span>Edificios de oficinas</span>
+        <span>Comunidades de propietarios</span>
+        <span>Teatros y centros culturales</span>
+        <span>Eventos y espectáculos</span>
+        <span>Centros comerciales</span>
+        <span>Instituciones</span>
+      </div>
+    </div>
+
+    <!-- ================= SERVICIOS ================= -->
+    <section id="servicios">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="kicker">Qué hacemos</p>
+          <h2>Servicios auxiliares <em>completos</em></h2>
+          <p>El personal que recibe, orienta y hace que todo funcione a la entrada de tus instalaciones y en tus eventos. Ocho servicios que se pueden contratar por separado o combinados, con el <strong style="color:var(--gold-soft)">control de accesos</strong> como servicio principal.</p>
+        </div>
+        <div class="grid-servicios">
+          <article class="card featured reveal" id="control-accesos">
+            <div class="f-head">
+              <div class="icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M5.5 17c.6-1.8 1.9-2.7 3.5-2.7s2.9.9 3.5 2.7"/><path d="M15.5 9h3"/><path d="M15.5 13h3"/></svg></div>
+              <div>
+                <h3>Control de accesos</h3>
+                <span class="badge-destacado">Servicio principal</span>
+              </div>
+            </div>
+            <ul class="f-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Entradas y salidas:</b> registro ordenado de personas, visitas y proveedores.</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Acreditaciones:</b> verificación de pases e invitaciones según tus normas.</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Accesos de vehículos:</b> orientación y registro en aparcamientos y zonas de carga.</span></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Parte diario:</b> registro de movimientos e incidencias para tu organización.</span></li>
+            </ul>
+            <p class="f-desc">Nuestro servicio más demandado: personal auxiliar en la puerta de tu edificio, recinto o evento que <strong>registra, verifica acreditaciones, orienta y ordena el flujo de personas</strong>. En edificios de oficinas, comunidades, centros comerciales, teatros y eventos, con la imagen y el trato que tu organización merece.</p>
+            <p class="f-note">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
+              <span>Control de accesos <strong>exclusivamente auxiliar</strong>: registro, información y ordenación de flujos. No es vigilancia ni seguridad privada, funciones reservadas por la <strong>Ley 5/2014</strong> a las empresas de seguridad habilitadas.</span>
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="num">01</span>
+            <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div>
+            <h3>Conserjería</h3>
+            <p>Presencia permanente en tu edificio: apertura y cierre, recepción de paquetería y correspondencia, comprobación de zonas comunes y atención a residentes y visitas.</p>
+          </article>
+          <article class="card reveal d1">
+            <span class="num">02</span>
+            <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
+            <h3>Recepción</h3>
+            <p>Atención presencial y telefónica, gestión y registro de visitas, agenda y apoyo administrativo básico. La primera imagen de tu organización, cuidada al detalle.</p>
+          </article>
+          <article class="card reveal d2">
+            <span class="num">03</span>
+            <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2.5 2.5 0 0 0 0 5v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2.5 2.5 0 0 0 0-5Z"/><path d="M13 5v2"/><path d="M13 11v2"/><path d="M13 17v2"/></svg></div>
+            <h3>Taquillaje</h3>
+            <p>Venta y control de entradas en teatros, eventos y espectáculos: gestión de caja, atención al espectador y apoyo en la venta anticipada y en puerta.</p>
+          </article>
+          <article class="card reveal">
+            <span class="num">04</span>
+            <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11a2 2 0 0 1 2 2v2H3v-2a2 2 0 0 1 2-2Z"/><path d="M19 11a2 2 0 0 1 2 2v2h-4v-2a2 2 0 0 1 2-2Z"/><path d="M5 11V7a7 7 0 0 1 14 0v4"/><path d="M3 19h18"/><path d="M7 15v4"/><path d="M17 15v4"/></svg></div>
+            <h3>Acomodación</h3>
+            <p>Acompañamiento del público a sus localidades, entrega de programas, resolución de incidencias y apoyo cercano durante todo el espectáculo o evento.</p>
+          </article>
+          <article class="card reveal d1">
+            <span class="num">05</span>
+            <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg></div>
+            <h3>Información y atención al público</h3>
+            <p>Puntos de información claros y amables: orientación, indicaciones y respuesta a las consultas de tus usuarios, visitantes y clientes.</p>
+          </article>
+          <article class="card reveal d2">
+            <span class="num">06</span>
+            <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="14" r="4.5"/><path d="m11.2 10.8 8.3-8.3"/><path d="M16 5l3 3"/><path d="M19.5 2.5l2 2"/></svg></div>
+            <h3>Custodia de llaves</h3>
+            <p>Custodia, registro y entrega controlada de las llaves de tus instalaciones, con protocolo claro y trazabilidad de cada movimiento.</p>
+          </article>
+          <article class="card reveal d3">
+            <span class="num">07</span>
+            <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v15"/><path d="M16 9h3a2 2 0 0 1 2 2v10"/><path d="M2 21h20"/><path d="M8 8h2"/><path d="M8 12h2"/><path d="M8 16h2"/><path d="M12 8h1"/><path d="M12 12h1"/><path d="M12 16h1"/></svg></div>
+            <h3>Facility services</h3>
+            <p>Apoyo integral a la gestión de tus instalaciones: coordinación de servicios externos, reporte de incidencias y tareas auxiliares de soporte al facility manager.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AVISO: NO SEGURIDAD PRIVADA ================= -->
+    <div class="aviso">
+      <div class="wrap">
+        <div class="aviso-box reveal" role="note">
+          <div class="shield">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <h3>Servicios auxiliares, no seguridad privada</h3>
+            <p>THESMOS presta <strong>exclusivamente servicios auxiliares</strong>. No realizamos funciones de vigilancia ni de protección de personas y bienes, que la <strong>Ley 5/2014, de Seguridad Privada</strong>, reserva a las empresas de seguridad habilitadas. Nuestro personal no es personal de seguridad: su labor es atender, informar, registrar y facilitar el funcionamiento diario de tus instalaciones y eventos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= POR QUÉ THESMOS ================= -->
+    <section class="porque" id="por-que-thesmos">
+      <div class="wrap">
+        <div class="porque-grid">
+          <div class="porque-photo reveal">
+            <img src="assets/foto-1.jpg" alt="Vigilante en entrada de edificio" width="1920" height="1281" loading="lazy" decoding="async" />
+            <div class="tag">
+              <b>Empleo con propósito</b>
+              <small>Cada servicio contratado crea una oportunidad laboral real</small>
+            </div>
+          </div>
+          <div>
+            <div class="sec-head reveal" style="margin-bottom:0">
+              <p class="kicker">Por qué elegirnos</p>
+              <h2>Profesionalidad que además <em>suma a la sociedad</em></h2>
+              <p>THESMOS es la Asociación para la Inserción Sociolaboral: una entidad sin ánimo de lucro que crea empleo digno para personas en situación o riesgo de exclusión social. Al contratarnos, tu organización gana un servicio cuidado y, a la vez, impulsa oportunidades reales en toda España.</p>
+            </div>
+            <div class="valores">
+              <div class="valor reveal">
+                <div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-2 7 5.5-3 5.5 3-2-7"/></svg></div>
+                <div>
+                  <h3>Profesionalidad y formación</h3>
+                  <p>Personal seleccionado, formado para su puesto y supervisado de forma continua, con imagen cuidada y protocolos de trabajo claros.</p>
+                </div>
+              </div>
+              <div class="valor reveal d1">
+                <div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.4 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3.4 1-4.5 2.5C10.9 4 9.3 3 7.5 3A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.1 3 5.5l7 7 7-7Z"/></svg></div>
+                <div>
+                  <h3>Impacto social real</h3>
+                  <p>Sin ánimo de lucro: todo el excedente se reinvierte en la misión. Cada contrato se traduce en empleo digno y acompañamiento en el itinerario de inserción de nuestros trabajadores.</p>
+                </div>
+              </div>
+              <div class="valor reveal d2">
+                <div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+                <div>
+                  <h3>Flexibilidad horaria</h3>
+                  <p>Servicios continuados, refuerzos en horas punta o coberturas puntuales para un evento. Nos adaptamos a tus horarios y a tu operativa.</p>
+                </div>
+              </div>
+              <div class="valor reveal d3">
+                <div class="v-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                <div>
+                  <h3>Cercanía en toda España</h3>
+                  <p>Ámbito nacional y un interlocutor directo: respuesta ágil ante cualquier incidencia, sustitución o cambio en el servicio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CÓMO TRABAJAMOS ================= -->
+    <section id="como-trabajamos">
+      <div class="wrap">
+        <div class="sec-head center reveal">
+          <p class="kicker">Cómo trabajamos</p>
+          <h2>Empezar es <em>muy sencillo</em></h2>
+          <p>Sin compromisos ni letra pequeña: tres pasos para tener tu servicio auxiliar en marcha.</p>
+        </div>
+        <div class="pasos">
+          <div class="paso reveal">
+            <span class="n">1</span>
+            <h3>Cuéntanos qué necesitas</h3>
+            <p>Escuchamos tu caso —un edificio, un evento, una cobertura puntual— y, si hace falta, visitamos tus instalaciones sin compromiso.</p>
+          </div>
+          <div class="paso reveal d1">
+            <span class="n">2</span>
+            <h3>Propuesta a medida</h3>
+            <p>Definimos contigo las funciones exactas, los horarios y el perfil del personal, con un presupuesto claro y cerrado.</p>
+          </div>
+          <div class="paso reveal d2">
+            <span class="n">3</span>
+            <h3>Equipo en marcha</h3>
+            <p>Seleccionamos y formamos al personal para tu puesto concreto, y hacemos seguimiento continuo del servicio contigo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BANDA EVENTOS ================= -->
+    <div class="banda-foto">
+      <div class="wrap">
+        <div class="banda reveal">
+          <img class="bg" src="assets/foto-2.jpg" alt="Vigilante con emisora en barrera de acceso" width="1599" height="1062" loading="lazy" decoding="async" />
+          <div class="banda-in">
+            <h3>¿Organizas eventos o espectáculos? <em>Nosotros recibimos a tu público</em></h3>
+            <p>Taquillaje, acomodación y atención al público para teatros, salas y eventos: el equipo que hace que la experiencia de tus espectadores empiece bien desde la puerta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="contacto" id="contacto">
+      <div class="wrap">
+        <div class="contacto-grid">
+          <div class="reveal">
+            <p class="kicker">Contacto</p>
+            <h2>Hablemos de <em>tu servicio</em></h2>
+            <p class="intro">Cuéntanos qué necesitas —una conserjería continuada, un refuerzo de recepción o el equipo completo para un evento— y te preparamos una propuesta sin compromiso.</p>
+            <div class="contact-cards">
+              <a class="c-card" href="mailto:asociacionthesmos@gmail.com?subject=Solicitud%20de%20informaci%C3%B3n%20%E2%80%94%20Servicios%20Auxiliares%20THESMOS">
+                <span class="c-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                <span><small>Correo electrónico</small><b>asociacionthesmos@gmail.com</b></span>
+              </a>
+              <a class="c-card" href="https://wa.me/34604541488" target="_blank" rel="noopener">
+                <span class="c-icon wa"><svg width="23" height="23" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></span>
+                <span><small>Teléfono · WhatsApp</small><b>+34 604 54 14 88</b></span>
+              </a>
+              <div class="c-card">
+                <span class="c-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                <span><small>Zona de actuación</small><b>Toda España</b></span>
+              </div>
+            </div>
+            <p class="contacto-note">Escríbenos por WhatsApp y te respondemos lo antes posible.</p>
+          </div>
+          <div class="form-fake reveal d1">
+            <h3>Qué incluir en tu mensaje</h3>
+            <p>Para darte una respuesta rápida y una propuesta ajustada, cuéntanos:</p>
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Qué servicio necesitas: conserjería, recepción, un evento…</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Dónde está la instalación o el recinto, en cualquier punto de España</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Horarios y fechas: servicio continuado o días concretos</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Cuántas personas necesitas en cada turno</li>
+            </ul>
+            <a class="btn" href="https://wa.me/34604541488?text=Hola%2C%20quiero%20pedir%20un%20presupuesto" target="_blank" rel="noopener" style="width:100%;justify-content:center"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Pedir presupuesto por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <!-- ================= PIE ================= -->
+    <footer>
+      <div class="wrap">
+        <div class="foot-grid">
+          <div class="foot-brand">
+            <a class="brand" href="#inicio" aria-label="THESMOS — inicio">
+              <span class="brand-mark" aria-hidden="true">Θ</span>
+              <span>
+                <span class="brand-name">THESMOS</span>
+                <span class="brand-sub" style="display:block">Servicios Auxiliares</span>
+              </span>
+            </a>
+            <p>Asociación THESMOS para la Inserción Sociolaboral. Entidad sin ánimo de lucro dedicada a crear empleo digno para personas en situación o riesgo de exclusión social.</p>
+          </div>
+          <div class="foot-col">
+            <h4>Servicios</h4>
+            <a href="#servicios">Conserjería y recepción</a>
+            <a href="#servicios">Control de accesos</a>
+            <a href="#servicios">Taquillaje y acomodación</a>
+            <a href="#servicios">Custodia de llaves</a>
+            <a href="#servicios">Facility services</a>
+          </div>
+          <nav class="foot-col" aria-label="Nuestros servicios">
+            <h4>Nuestros servicios</h4>
+            <a href="https://samudelgado.github.io/thesmos-web-principal/">THESMOS · Inicio</a>
+            <a class="active" aria-current="page" href="https://samudelgado.github.io/thesmos-servicios-auxiliares/">Servicios Auxiliares</a>
+            <a href="https://samudelgado.github.io/thesmos-limpieza/">Limpieza</a>
+            <a href="https://samudelgado.github.io/thesmos-jardineria/">Jardinería</a>
+            <a href="https://samudelgado.github.io/thesmos-mantenimiento/">Mantenimiento</a>
+            <a href="https://samudelgado.github.io/thesmos-eventos/">Eventos</a>
+            <a href="https://samudelgado.github.io/thesmos-comercio/">Comercio</a>
+            <a href="https://samudelgado.github.io/thesmos-hosteleria/">Hostelería</a>
+            <a href="https://samudelgado.github.io/thesmos-tecnologia/">Tecnología</a>
+          </nav>
+          <div class="foot-col">
+            <h4>Contacto</h4>
+            <a href="mailto:asociacionthesmos@gmail.com">asociacionthesmos@gmail.com</a>
+            <a href="https://wa.me/34604541488" target="_blank" rel="noopener">+34 604 54 14 88 (WhatsApp)</a>
+            <span>Toda España</span>
+          </div>
+        </div>
+        <div class="foot-legal">
+          <span>© 2026 Asociación THESMOS para la Inserción Sociolaboral</span>
+          <span>Servicios exclusivamente auxiliares · No somos una empresa de seguridad privada</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Cabecera al hacer scroll
+      var header = document.getElementById('header');
+      function onScroll(){ header.classList.toggle('scrolled', window.scrollY > 24); }
+      window.addEventListener('scroll', onScroll, { passive:true });
+      onScroll();
+
+      // Menú móvil: bloqueo de scroll, cierre con Escape y al ampliar a escritorio
+      var toggle = document.getElementById('navToggle');
+      var nav = document.getElementById('mainNav');
+      function setMenu(open){
+        nav.classList.toggle('open', open);
+        header.classList.toggle('menu-open', open);
+        document.body.classList.toggle('menu-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      }
+      toggle.addEventListener('click', function(){
+        setMenu(!nav.classList.contains('open'));
+      });
+      nav.addEventListener('click', function(e){
+        if (e.target.tagName === 'A') setMenu(false);
+      });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && nav.classList.contains('open')) setMenu(false);
+      });
+      window.addEventListener('resize', function(){
+        if (window.innerWidth > 820 && nav.classList.contains('open')) setMenu(false);
+      });
+
+      // Menú «Nuestros servicios»: abrir/cerrar, cierre con Escape y al hacer clic fuera
+      var servicesWrap = document.getElementById('navServices');
+      var servicesBtn = document.getElementById('navServicesBtn');
+      function setServices(open){
+        servicesWrap.classList.toggle('open', open);
+        servicesBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      servicesBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        setServices(!servicesWrap.classList.contains('open'));
+      });
+      document.addEventListener('click', function(e){
+        if (servicesWrap.classList.contains('open') && !servicesWrap.contains(e.target)) setServices(false);
+      });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && servicesWrap.classList.contains('open')){
+          setServices(false);
+          servicesBtn.focus();
+        }
+      });
+      servicesWrap.addEventListener('click', function(e){
+        if (e.target.tagName === 'A') setServices(false);
+      });
+
+      // Aparición suave al hacer scroll
+      var revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !prefersReduced){
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if (entry.isIntersecting){
+              entry.target.classList.add('visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(function(el){ io.observe(el); });
+      } else {
+        revealEls.forEach(function(el){ el.classList.add('visible'); });
+      }
+
+      /* ================= Capa premium: parallax, progreso y micro-interacciones ================= */
+      var heroEl = document.getElementById('inicio');
+      var heroIn = document.querySelector('.hero-in');
+      var thetaEl = document.querySelector('.hero-theta');
+      var progressEl = document.getElementById('progress');
+      var bandaEl = document.querySelector('.banda');
+      var bandaImg = bandaEl ? bandaEl.querySelector('img.bg') : null;
+
+      if (!prefersReduced){
+        // Parallax continuo de la theta solo con puntero fino: en táctil la
+        // flotación CSS basta y se ahorra un bucle rAF permanente (batería y fluidez)
+        var finePointer = window.matchMedia('(pointer: fine)').matches;
+        if (thetaEl && finePointer) thetaEl.classList.add('px-on');
+        var thetaStart = performance.now();
+        var thetaInView = true;
+        if ('IntersectionObserver' in window && heroEl){
+          new IntersectionObserver(function(en){ thetaInView = en[0].isIntersecting; }, { threshold: 0 }).observe(heroEl);
+        }
+        if (finePointer){
+          (function thetaLoop(now){
+            if (thetaEl && thetaInView){
+              var t = (now - thetaStart) / 1000;
+              var py = window.scrollY * 0.16;
+              thetaEl.style.transform = 'translateY(' + (py + Math.sin(t * 0.7) * 10).toFixed(1) + 'px) rotate(' + (Math.sin(t * 0.5) * 1.6).toFixed(2) + 'deg)';
+            }
+            requestAnimationFrame(thetaLoop);
+          })(thetaStart);
+        }
+
+        // Scroll: barra de progreso, parallax del hero y de la banda de eventos
+        var scrollTicking = false;
+        function scrollFx(){
+          var doc = document.documentElement;
+          var max = doc.scrollHeight - doc.clientHeight;
+          if (progressEl) progressEl.style.transform = 'scaleX(' + (max > 0 ? Math.min(window.scrollY / max, 1) : 0) + ')';
+          if (heroIn && heroEl){
+            var hh = heroEl.offsetHeight;
+            if (window.scrollY < hh){
+              var p = window.scrollY / hh;
+              heroIn.style.transform = 'translateY(' + (window.scrollY * 0.12).toFixed(1) + 'px)';
+              heroIn.style.opacity = String(1 - p * 0.3);
+            }
+          }
+          if (bandaImg && bandaEl){
+            var r = bandaEl.getBoundingClientRect();
+            var vh = window.innerHeight;
+            if (r.bottom > 0 && r.top < vh){
+              var bp = ((r.top + r.height / 2) - vh / 2) / vh;
+              bandaImg.style.transform = 'translateY(' + (bp * -26).toFixed(1) + 'px) scale(1.14)';
+            }
+          }
+          scrollTicking = false;
+        }
+        window.addEventListener('scroll', function(){
+          if (!scrollTicking){ scrollTicking = true; requestAnimationFrame(scrollFx); }
+        }, { passive: true });
+        scrollFx();
+
+        // Spotlight + inclinación 3D sutil en tarjetas (solo puntero fino)
+        if (window.matchMedia('(pointer: fine)').matches){
+          document.querySelectorAll('.card, .paso').forEach(function(el){
+            el.addEventListener('pointermove', function(e){
+              var r = el.getBoundingClientRect();
+              var x = e.clientX - r.left, y = e.clientY - r.top;
+              el.style.setProperty('--mx', (x / r.width * 100) + '%');
+              el.style.setProperty('--my', (y / r.height * 100) + '%');
+              if (el.classList.contains('card') && !el.classList.contains('featured')){
+                el.classList.add('tilting');
+                var rx = ((y / r.height) - 0.5) * -5;
+                var ry = ((x / r.width) - 0.5) * 5;
+                el.style.transform = 'perspective(900px) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg) translateY(-6px)';
+              }
+            });
+            el.addEventListener('pointerleave', function(){
+              if (el.classList.contains('card') && !el.classList.contains('featured')){
+                el.style.transform = '';
+                el.classList.remove('tilting');
+              }
+            });
+          });
+        }
+
+        // Marquesina de ámbitos en todas las pantallas (el contenido se duplica oculto a lectores de pantalla)
+        var ambitosIn = document.querySelector('.ambitos-in');
+        if (ambitosIn){
+          var track = document.createElement('div');
+          track.className = 'amb-track';
+          while (ambitosIn.firstChild) track.appendChild(ambitosIn.firstChild);
+          var half = track.children.length;
+          track.innerHTML += track.innerHTML;
+          for (var i = half; i < track.children.length; i++) track.children[i].setAttribute('aria-hidden', 'true');
+          ambitosIn.appendChild(track);
+          ambitosIn.classList.add('marquee');
+        }
+      }
+
+      /* ================= Hero 3D: partículas doradas y geometrías en movimiento (Three.js) ================= */
+      (function(){
+        var canvas = document.getElementById('heroCanvas');
+        if (!canvas || !heroEl || !window.THREE || prefersReduced) return;
+        // Modo rendimiento móvil: táctil, pantalla pequeña o pocos núcleos
+        var isMobilePerf = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 720 ||
+          (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4);
+        var renderer;
+        try {
+          renderer = new THREE.WebGLRenderer({
+            canvas: canvas, alpha: true,
+            antialias: !isMobilePerf,
+            powerPreference: isMobilePerf ? 'low-power' : 'high-performance'
+          });
+        } catch (e) { return; }
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, isMobilePerf ? 1.5 : 2));
+
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
+        camera.position.set(0, 0, 9);
+
+        var GOLD = 0xD4A944, GOLD_SOFT = 0xE8C877;
+
+        // Textura suave para las partículas
+        function makeSprite(){
+          var c = document.createElement('canvas'); c.width = c.height = 64;
+          var ctx = c.getContext('2d');
+          var g = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+          g.addColorStop(0, 'rgba(255,242,205,1)');
+          g.addColorStop(0.35, 'rgba(232,200,119,0.85)');
+          g.addColorStop(1, 'rgba(212,169,68,0)');
+          ctx.fillStyle = g; ctx.fillRect(0, 0, 64, 64);
+          return new THREE.CanvasTexture(c);
+        }
+
+        // Campo de partículas doradas (muy reducido en móvil para un render fluido)
+        var COUNT = isMobilePerf ? 150 : 780;
+        var pGeo = new THREE.BufferGeometry();
+        var pos = new Float32Array(COUNT * 3);
+        var speeds = new Float32Array(COUNT);
+        var phases = new Float32Array(COUNT);
+        for (var i = 0; i < COUNT; i++){
+          pos[i * 3] = (Math.random() - 0.5) * 22;
+          pos[i * 3 + 1] = (Math.random() - 0.5) * 13;
+          pos[i * 3 + 2] = (Math.random() - 0.5) * 7;
+          speeds[i] = 0.12 + Math.random() * 0.4;
+          phases[i] = Math.random() * Math.PI * 2;
+        }
+        pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+        var points = new THREE.Points(pGeo, new THREE.PointsMaterial({
+          size: isMobilePerf ? 0.17 : 0.15, map: makeSprite(), transparent: true, opacity: 0.85,
+          depthWrite: false, blending: THREE.AdditiveBlending, color: GOLD_SOFT, sizeAttenuation: true
+        }));
+        scene.add(points);
+
+        // Geometrías doradas en wireframe (menos segmentos en móvil)
+        var group = new THREE.Group();
+        var knot = new THREE.Mesh(
+          new THREE.TorusKnotGeometry(1.45, 0.42, isMobilePerf ? 100 : 150, isMobilePerf ? 12 : 18),
+          new THREE.MeshBasicMaterial({ color: GOLD, wireframe: true, transparent: true, opacity: 0.26 })
+        );
+        group.add(knot);
+        var ring = new THREE.Mesh(
+          new THREE.TorusGeometry(2.55, 0.014, 8, isMobilePerf ? 96 : 140),
+          new THREE.MeshBasicMaterial({ color: GOLD_SOFT, transparent: true, opacity: 0.4 })
+        );
+        ring.rotation.x = Math.PI / 2.4;
+        group.add(ring);
+        var ring2 = new THREE.Mesh(
+          new THREE.TorusGeometry(2.95, 0.01, 8, isMobilePerf ? 96 : 140),
+          new THREE.MeshBasicMaterial({ color: GOLD, transparent: true, opacity: 0.22 })
+        );
+        ring2.rotation.x = Math.PI / 1.8; ring2.rotation.y = 0.5;
+        group.add(ring2);
+        var ico = new THREE.Mesh(
+          new THREE.IcosahedronGeometry(0.85, 0),
+          new THREE.MeshBasicMaterial({ color: GOLD_SOFT, wireframe: true, transparent: true, opacity: 0.5 })
+        );
+        ico.position.set(-7.4, 2.1, -1.2);
+        scene.add(ico);
+        var octa = new THREE.Mesh(
+          new THREE.OctahedronGeometry(0.5, 0),
+          new THREE.MeshBasicMaterial({ color: GOLD, wireframe: true, transparent: true, opacity: 0.45 })
+        );
+        octa.position.set(-6.2, -2.3, 0.4);
+        scene.add(octa);
+        scene.add(group);
+
+        function layout(){
+          var w = heroEl.clientWidth, h = heroEl.clientHeight;
+          if (!w || !h) return;
+          renderer.setSize(w, h, false);
+          camera.aspect = w / h;
+          camera.updateProjectionMatrix();
+          var aspect = w / h;
+          if (aspect > 1.05){ group.position.set(3.6, 0.25, 0); group.scale.setScalar(1); }
+          else { group.position.set(1.15, 1.9, 0); group.scale.setScalar(0.72); }
+        }
+        layout();
+        window.addEventListener('resize', layout);
+
+        // Interactividad con el ratón
+        var mx = 0, my = 0, tx = 0, ty = 0;
+        heroEl.addEventListener('pointermove', function(e){
+          var r = heroEl.getBoundingClientRect();
+          tx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+          ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
+        });
+        heroEl.addEventListener('pointerleave', function(){ tx = 0; ty = 0; });
+
+        var running = true;
+        if ('IntersectionObserver' in window){
+          new IntersectionObserver(function(en){ running = en[0].isIntersecting; }, { threshold: 0 }).observe(heroEl);
+        }
+
+        var clock = new THREE.Clock();
+        var frame = 0;
+        (function animate(){
+          requestAnimationFrame(animate);
+          if (!running || document.hidden) return;
+          // En móvil se renderiza a ~30 fps: la mitad de coste de GPU, movimiento intacto
+          if (isMobilePerf && (frame++ % 2)) return;
+          var t = clock.getElapsedTime();
+          mx += (tx - mx) * 0.045;
+          my += (ty - my) * 0.045;
+
+          knot.rotation.x = t * 0.16; knot.rotation.y = t * 0.22;
+          ring.rotation.z = t * 0.12;
+          ring2.rotation.z = -t * 0.08;
+          group.rotation.y = mx * 0.35;
+          group.rotation.x = my * 0.18;
+          group.position.y += Math.sin(t * 0.6) * 0.0012;
+          ico.rotation.x = t * 0.3; ico.rotation.y = t * 0.4;
+          ico.position.y = 2.1 + Math.sin(t * 0.8) * 0.18;
+          octa.rotation.x = -t * 0.35; octa.rotation.y = t * 0.28;
+          octa.position.y = -2.3 + Math.cos(t * 0.7) * 0.15;
+
+          var arr = pGeo.attributes.position.array;
+          for (var j = 0; j < COUNT; j++){
+            arr[j * 3 + 1] += speeds[j] * 0.008;
+            arr[j * 3] += Math.sin(t * 0.6 + phases[j]) * 0.0016;
+            if (arr[j * 3 + 1] > 6.8) arr[j * 3 + 1] = -6.8;
+          }
+          pGeo.attributes.position.needsUpdate = true;
+          points.rotation.y = mx * 0.05;
+
+          var sp = heroEl.offsetHeight ? Math.min(window.scrollY / heroEl.offsetHeight, 1) : 0;
+          camera.position.x = mx * 0.7;
+          camera.position.y = -my * 0.45 - sp * 0.7;
+          camera.lookAt(0, 0, 0);
+          canvas.style.opacity = String(1 - sp * 0.55);
+          renderer.render(scene, camera);
+        })();
+      })();
+    </script>
+  </body>
+</html>
